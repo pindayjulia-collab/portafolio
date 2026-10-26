@@ -7,6 +7,7 @@
   --art-beige:#F5F5DC; --art-navy:var(--art-prusia); --art-green:#006400; --art-brown:var(--art-ocre); --art-paper:#FBFAF5; --art-ink:#111111;
   --font-serif:"Lora", Georgia, "Times New Roman", serif;
   --font-sans:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-firma:"Allura", "Snell Roundhand", "Segoe Script", cursive;
   --image-focus-scale:1.05;
   --ease:cubic-bezier(.4,0,.2,1);
   --t:all .4s ease-in-out;
@@ -137,7 +138,7 @@ em{font-style:italic}
 .capa-sello{opacity:1;visibility:visible;display:grid;place-items:center;overflow:hidden;background-image:var(--tejido)}
 .anillo{position:absolute;inset:4%;width:92%;height:92%}
 .anillo text{font:500 10.5px var(--font-sans);letter-spacing:3.2px;fill:#fff}
-.mono{font:italic 400 34cqmin/1 var(--font-serif);color:#fff;letter-spacing:-.04em}
+.mono{font:400 34cqmin/1 var(--font-firma);color:#fff;transform:rotate(-14deg);padding-bottom:.08em}
 
 .capa-panel{padding:12cqw 12cqw;display:flex;flex-direction:column;gap:4cqh;color:var(--art-ink)}
 .p-eyebrow{font:500 4.5cqw/1 var(--font-sans);letter-spacing:.3em;text-transform:uppercase}
@@ -361,7 +362,7 @@ em{font-style:italic}
 .retrato-anillo{position:absolute;width:78%;aspect-ratio:1;animation:girar 60s linear infinite}
 .retrato-anillo text{font:500 9.6px var(--font-sans);letter-spacing:3.6px;fill:#fff}
 @keyframes girar{to{transform:rotate(360deg)}}
-.retrato-ph span{font:italic 400 clamp(4rem,9vw,7rem)/1 var(--font-serif);color:#fff;letter-spacing:-.04em}
+.retrato-ph .firma{font:400 clamp(4.4rem,9vw,7.2rem)/1 var(--font-firma);color:#fff;transform:rotate(-14deg);padding-bottom:.08em}
 .retrato figcaption{position:absolute;left:16px;bottom:14px;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#fff;opacity:.8}
 .sobre-txt{display:flex;flex-direction:column;gap:22px;min-width:0}
 .sobre-txt h2{font-size:clamp(2rem,4vw,3.1rem);line-height:1.1}
