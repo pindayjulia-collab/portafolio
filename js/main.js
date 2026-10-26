@@ -262,6 +262,17 @@
     location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   });
 
+  /* Contador público de visitas (GoatCounter); si no responde, el pie queda como estaba */
+  fetch('https://juliapinday.goatcounter.com/counter/TOTAL.json')
+    .then((response) => (response.ok ? response.json() : Promise.reject(response.status)))
+    .then((data) => {
+      const total = parseInt(String(data.count).replace(/\D/g, ''), 10);
+      if (!total) return;
+      $('#visitas-n').textContent = total.toLocaleString('es-PE');
+      $('#visitas').hidden = false;
+    })
+    .catch(() => {});
+
   /* Arranque del carrusel (después del visor, que la deriva consulta) */
   renderCarousel();
   moveIndicator();

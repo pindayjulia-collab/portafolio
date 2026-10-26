@@ -417,6 +417,8 @@ summary{transition:var(--t)} summary:hover{color:var(--black-text)}
 details p{margin-top:8px;font-size:.8rem;color:var(--muted);max-width:40ch}
 .seo{margin-top:56px;padding-top:24px;border-top:1px solid var(--light-grey-border);display:flex;flex-wrap:wrap;gap:8px 20px;font-size:.75rem;color:var(--muted)}
 .seo a{text-decoration:none;transition:var(--t)} .seo a:hover{color:var(--black-text)}
+.visitas{margin-top:40px;display:flex;align-items:baseline;gap:10px;font-size:.85rem;color:var(--muted)}
+.visitas b{font:400 1.9rem/1 var(--font-serif);color:var(--black-text);font-variant-numeric:tabular-nums}
 .legal{margin-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.78rem;color:var(--muted)}
 
 /* ---------- Responsivo ---------- */
