@@ -197,9 +197,15 @@
       : '';
     if (hasImages) showImage(p, 0); else $('#lb-arte').innerHTML = p.arte || '';
   };
+  const countProjectView = (p) => {
+    if (!window.goatcounter || !window.goatcounter.count) return;
+    const slug = p.titulo.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    window.goatcounter.count({ path: 'proyecto/' + slug, title: p.titulo, event: true });
+  };
   const openLightbox = (i) => {
     lastFocus = document.activeElement;
     showProject(i);
+    countProjectView(projects[visible.at(current)]);
     lightbox.classList.add('open');
     lightbox.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
